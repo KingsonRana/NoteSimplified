@@ -1,0 +1,507 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.appComponent{
+  overflow: hidden;
+  height: 100vh;
+  background: #e5e5e5;
+}
+.addNoteComponent{
+  background-color: white;
+border-radius: 10px;
+  width: 80vh;
+  margin: 0;
+ height: 61vh;
+ padding: 0;
+ justify-content: center;
+ align-items: center;
+}
+
+.addNoteComponent h2{
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+.addNoteComponent div{
+  width: 73vh;
+  margin: auto;
+}
+#description{
+  height: 120px;
+}
+
+.addNoteComponent button{
+  width: 66vh ;
+  display: block;
+  margin: auto;
+  background: -webkit-linear-gradient(left, #003366,#004080,#0059b3
+, #0073e6);
+}
+.addNoteComponent button:hover{
+  background:#004080;
+  transition: background-color 0.9s;
+}
+
+#addNote{
+  width: 66vh;
+  margin: auto;
+  background: -webkit-linear-gradient(left, #003366,#004080,#0059b3
+, #0073e6);
+}
+
+#addNote:hover{
+  background:#004080;
+  transition: background-color 0.9s;
+}
+
+#addNote:focus{
+  box-shadow: none; /* Apply styles to the element with "element-class" that also includes "included-class" */
+}
+
+.yournotes{
+  text-align: center;
+  flex: 40;
+}
+
+.dialog{
+  margin-top: 8rem;
+}
+
+.addNoteButton{
+  border-radius: 25px;
+  flex: 1;
+  color:black;
+  background-color: #dfdbe3;
+}
+.addNoteButton:hover{
+  color: black;
+  background: white;
+  box-shadow: 0px 0px 2px 2px red;
+  font-size: 20px;
+}
+.logout{
+  border-radius: 25px;
+  flex: 1;
+  color:black;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #dfdbe3;
+}
+.logout:hover{
+  color: black;
+  background: white;
+  box-shadow: 0px 0px 2px 2px rgb(11, 171, 0);
+}
+/* .addNoteButton:hover::before{
+  content: "Add Note ";
+} */
+.home{
+  display: flex;
+ 
+}
+.viewPort{
+  padding: 0;
+  margin: 0;
+  display: contents;
+}
+.noteItems{
+  border-radius: 10px;
+  background: #e7e7e7;
+  box-shadow: 0px 0px 2px 2px #dfdbe3;
+}
+.descriptionNoteItem{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.noteItemParent{
+  width:33%
+}
+.navBarPosition{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top{
+  padding: 5px;
+    position:sticky;
+    top: 0;
+    z-index: 10;
+
+    width: 100%;
+    border-bottom: 1px solid #c1bdbd;
+    background: #e4e4e4;
+    /* margin-bottom: 11px; */
+    border-radius: 50px;
+}
+
+.profile{
+  width: 25vh;
+  position: fixed;
+  top: 58px;
+  left: 2px;
+  height: 91.5vh;
+  /* border: 1px solid; */
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  /* background: linear-gradient(45deg, #e5dfdf, #f5f3f3); */
+  background: #000000;
+  box-shadow: 5px 3px 5px 3px #c7dbe2;
+}
+.profile p{
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  line-height: 1.0;
+  margin-top: 10px;
+  padding: 4px;
+  padding-left: 6px;
+}
+
+.parentNoteSection{
+  display: block;
+  position: relative;
+  background: white;
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.profile div{
+  display: flex;
+  /* background: red; */
+  border-radius: 70px;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+  top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .container{
+  padding: 10px;
+  border-radius: 10px;
+  background: white;
+  position: relative;
+  height: 100vh;
+  /* background: red; */
+  box-shadow: 0px 0px 2px 2px rgb(197, 196, 196);
+  top: 7px;
+  left: 2px;
+  width: 82%;
+}
+
+.noteItem{
+  padding: 26px;
+  /* margin-top: 40px; */
+  overflow-x: hidden;
+  left: 20px;
+  width: 100%;
+  position: absolute;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+.modal {
+  position: fixed;
+  top: 39px;
+  left: 112px;
+  z-index: 1060;
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.editModal{
+  position: fixed;
+  top: 140px;
+  left: 112px;
+  z-index: 1060;
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+#profile{
+  color: #080808;
+  height: 30%;
+  background: #e7e7e7;
+  border: none;
+  position:absolute;
+  top: 10px;
+  z-index: 10;
+
+}
+
+#profile h4{
+  text-align: center;
+}
+
+
+.cardItem:active{
+  color: black;
+  cursor: pointer;
+  width: fit-content;
+  transition: 2s ease;
+  z-index: 1;
+}
+.aboutP{
+  padding: 5px;
+}
+
+#editNote{
+  width: 66vh;
+  margin: auto;
+  background: -webkit-linear-gradient(left, #003366,#004080,#0059b3
+, #0073e6);
+}
+.noteTop{
+  display: flex;
+  flex-direction: row;
+}
+
+.proAbt{
+  position: relative;
+  top: 7px;
+  left: 2px;
+}
+
+#about{
+  width: 16rem;
+  box-shadow: 0px 0px 2px 2px rgb(197, 196, 196);
+  border-radius: 10px;
+  color:#e87171;
+  flex: auto;
+  top: 35%;
+  height: 65%;
+  background-image: url("../public/background1.png");
+  background-size: 100% 100%;
+  background-position-x: center;
+}
+
+.signUpCard{
+  position: relative;
+  height: 70vh;
+  width: 40%;
+  margin: auto;
+  top: 100px;
+  background-color: white;
+  box-shadow:0px 0px 4px 2px #c3b9b9;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+.signUpContainer{
+ left: 8%;
+}
+.left{
+  left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+ 
+ 
+  /* background-image: url("../public/landing.png");
+  background-size: 100% 100%;
+  background-position-x: center; */
+  
+}
+.left::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:whitesmoke;
+}
+.signUpForm{
+  position: relative;
+  margin: auto;
+  width: 75%;
+}
+.signUpCard h5{
+  color: black;
+    font-family: cursive;
+    font-size: 28px;
+    height: 9% ;
+    text-align: center;
+     margin-top: 2px;
+    border-radius: 10px;
+}
+
+.signUpCard text{
+  
+  margin: auto;
+  color: rgb(0, 0, 0);
+  font-family: cursive;
+  font-size: 17px;
+  text-align: center;
+  background: #acacac;
+  box-shadow: 0px 0px 1px 1px whitesmoke;
+}
+.signUpForm .mb-3{
+ color: rgb(0, 0, 0);
+}
+
+.signUpButton button{
+  background: -webkit-linear-gradient(left, #003366,#004080,#0059b3
+  , #0073e6);
+ width: 100%;
+}
+
+.signUpButton button:hover{
+  background:#004080;
+  transition: background-color 0.9s;
+}
+
+.card h6{
+  text-align: center;
+}
+
+.mb-3 div{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.icon{
+  margin:auto
+}
+.formInput{
+  border-radius: 0px;
+  border: none;
+}
+.formInput:focus{
+ box-shadow: none;
+}
+.card-title{
+  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.card-text{
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width:500px){
+  .signUpCard{
+    position: relative;
+  
+    width: 100%;
+    margin: auto;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px 0px 4px 2px #c3b9b9;
+    border-radius: 10px;
+    overflow: hidden;
+
+  }
+  .signUpContainer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    
+  }
+  .proAbt {
+    display:none;
+}
+.home .container{
+  padding: 10px;
+  border-radius: 0px;
+  background: white;
+  height: 100vh;
+  width: 100%;
+  box-shadow: 0px 0px 2px 2px rgb(197, 196, 196);
+  top: 0px;
+ left: 0px;
+}
+.noteItem{
+  left: 0px;
+}
+.noteItemParent{
+  width: 100%;
+}
+.modal{
+  left: 0px;
+  top: 0px;
+}
+#addNote{
+  width: 100%;
+}
+#editNote{
+  width: 100%;
+}
+body{
+  overflow: hidden;
+}
+.card-text {
+  overflow: hidden;
+  white-space: inherit;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+}
